@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travenzo - Curated Travel Experiences</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Travenzo</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#trips">Trips</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Discover India's <br> <span class="text-turquoise">Hidden Gems</span></h1>
+            <p class="hero-subtitle">Experience <span class="text-turquoise">authentic</span> cultural journeys through India's most breathtaking destinations with expert guides.</p>
+            <div class="hero-buttons">
+                <a href="#trips" class="btn btn-primary">Explore Trips <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="trips" class="destinations">
+        <div class="section-header">
+            <span class="tag">Popular Destinations</span>
+            <h2>Curated Experiences</h2>
+        </div>
+        <div class="destination-grid">
+            <div class="dest-card" style="background-image: url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&q=80');">
+                <div class="dest-overlay">
+                    <h3>Jirang</h3>
+                    <p>Odisha's Hidden Paradise</p>
+                </div>
+            </div>
+            <div class="dest-card" style="background-image: url('https://images.unsplash.com/photo-1588414734732-660b07304ddb?auto=format&fit=crop&q=80');">
+                <div class="dest-overlay">
+                    <h3>Uttarakhand</h3>
+                    <p>Spiritual Heart of Himalayas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header white-text">
+                <span class="tag tag-white">Transparent Pricing</span>
+                <h2>Choose Your Adventure</h2>
+            </div>
+
+            <div class="pricing-block jirang-block">
+                <div class="block-header">
+                    <h3>Jirang</h3>
+                    <p>Discover Odisha's hidden paradise</p>
+                    
+                    <div class="reg-fee-box">
+                        <span class="label">Registration Fee</span>
+                        <span class="amount">₹299</span>
+                        <button class="btn-pay-small"><i class="fas fa-credit-card"></i> Pay Now</button>
+                    </div>
+                </div>
+
+                <div class="plans-grid">
+                    <div class="plan-card">
+                        <div class="plan-header">Standard Booking</div>
+                        <div class="price-row">
+                            <span class="plan-price">₹1,499</span>
+                            <button class="btn-pay-action">Pay Now</button>
+                        </div>
+                        <div class="full-pay-row">
+                            <span>Full Payment:</span> <strong>₹4,990</strong>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Standard accommodation</li>
+                            <li><i class="fas fa-check"></i> Basic meals included</li>
+                        </ul>
+                    </div>
+
+                    <div class="plan-card premium">
+                        <div class="plan-badge">Most Popular</div>
+                        <div class="plan-header">Premium Booking</div>
+                        <div class="price-row">
+                            <span class="plan-price">₹1,710</span>
+                            <button class="btn-pay-action">Pay Now</button>
+                        </div>
+                        <div class="full-pay-row">
+                            <span>Full Payment:</span> <strong>₹5,700</strong>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Premium accommodation</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-block uttarakhand-block">
+                <div class="block-header">
+                    <h3>Uttarakhand</h3>
+                    <p>Explore the spiritual heart of the Himalayas</p>
+
+                    <div class="reg-fee-box">
+                        <span class="label">Registration Fee</span>
+                        <span class="amount">₹799</span>
+                        <button class="btn-pay-small"><i class="fas fa-credit-card"></i> Pay Now</button>
+                    </div>
+                </div>
+
+                <div class="plans-grid single-column">
+                    <div class="plan-card featured-card">
+                        <div class="plan-header">Total Booking Amount</div>
+                        <div class="price-row center-price">
+                            <span class="plan-price highlight">₹7,965</span>
+                            <button class="btn-pay-action large">Pay Now</button>
+                        </div>
+                        
+                        <div class="installment-container">
+                            <div class="installment-header"><i class="fas fa-wallet"></i> Installment Options Available</div>
+                            <div class="installment-grid">
+                                <div class="inst-item">
+                                    <span class="inst-label">1st Installment</span>
+                                    <span class="inst-amount">₹10,000</span>
+                                </div>
+                                <div class="inst-item">
+                                    <span class="inst-label">2nd Installment</span>
+                                    <span class="inst-amount">₹8,585</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> All transportation included</li>
+                            <li><i class="fas fa-check"></i> Expert mountain guides</li>
+                            <li><i class="fas fa-check"></i> Premium stays included</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Travenzo</div>
+            <p>&copy; 2026 Travenzo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

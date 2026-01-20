@@ -1,0 +1,291 @@
+/* VARIABLES - Travenzo Brand Colors */
+:root {
+    --primary-orange: #ff6b35;
+    --primary-teal: #00897b;
+    --brand-turquoise: #40E0D0; /* New Turquoise for highlights */
+    --dark-bg: #1a1a1a;
+    --text-dark: #222;
+    --white: #ffffff;
+    --light-gray: #f4f7f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+    color: var(--text-dark);
+}
+
+/* TEXT CONTRAST UTILITIES */
+.text-turquoise {
+    color: var(--brand-turquoise);
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Improves readability on images */
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.hamburger { display: none; color: white; font-size: 1.5rem; }
+
+/* HERO SECTION */
+.hero {
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1518002171953-a080ee802e12?auto=format&fit=crop&q=80') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Improved Contrast Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.65); /* Darkened for better text contrast */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 12px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary-orange);
+    color: var(--white);
+}
+
+.btn-primary:hover { background: #e05525; }
+
+/* DESTINATIONS */
+.destinations { padding: 4rem 5%; text-align: center; }
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.dest-card {
+    height: 250px;
+    border-radius: 12px;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.dest-overlay {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: var(--white);
+    text-align: left;
+}
+
+/* PRICING SECTION */
+.pricing-section {
+    background: var(--primary-teal);
+    padding: 4rem 5%;
+}
+
+.container { max-width: 1100px; margin: 0 auto; }
+
+.section-header.white-text { color: var(--white); text-align: center; margin-bottom: 3rem; }
+.tag { background: #e0f2f1; color: var(--primary-teal); padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
+.tag-white { background: rgba(255,255,255,0.2); color: var(--white); }
+
+/* Pricing Blocks */
+.pricing-block {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.block-header { text-align: center; color: var(--white); margin-bottom: 2rem; }
+.block-header h3 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+
+/* Registration Fee Box */
+.reg-fee-box {
+    background: rgba(255,255,255,0.15);
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-top: 10px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.reg-fee-box .label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+.reg-fee-box .amount { font-size: 1.5rem; font-weight: 700; color: var(--brand-turquoise); }
+
+/* Small Pay Button (Contextual) */
+.btn-pay-small {
+    background: var(--primary-orange);
+    border: none;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Cards */
+.plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.plans-grid.single-column { max-width: 600px; margin: 0 auto; display: block; }
+
+.plan-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.plan-card.premium { border: 2px solid var(--primary-orange); }
+
+.plan-badge {
+    position: absolute; top: -12px; right: 20px;
+    background: var(--primary-orange); color: var(--white);
+    padding: 4px 12px; border-radius: 12px; font-size: 0.75rem; font-weight: 700;
+}
+
+.plan-header { color: #666; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
+
+/* Price Row with Button */
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.price-row.center-price { justify-content: center; gap: 20px; }
+
+.plan-price { font-size: 2rem; font-weight: 700; color: var(--primary-orange); }
+.plan-price.highlight { font-size: 2.8rem; }
+
+/* Action Pay Button */
+.btn-pay-action {
+    background: transparent;
+    border: 2px solid var(--primary-orange);
+    color: var(--primary-orange);
+    padding: 6px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-pay-action:hover { background: var(--primary-orange); color: white; }
+.btn-pay-action.large { padding: 10px 25px; font-size: 1rem; }
+
+/* Full Payment Info */
+.full-pay-row {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #444;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+/* Features List */
+.plan-features { list-style: none; }
+.plan-features li { margin-bottom: 0.6rem; font-size: 0.9rem; color: #555; display: flex; align-items: center; gap: 8px; }
+.plan-features i { color: var(--primary-teal); }
+
+/* Installment Block (Uttarakhand Only) */
+.installment-container {
+    background: #e0f7fa;
+    border: 1px dashed var(--primary-teal);
+    border-radius: 8px;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.installment-header { color: var(--primary-teal); font-weight: 600; margin-bottom: 10px; font-size: 0.9rem; }
+.installment-grid { display: flex; justify-content: space-between; }
+.inst-item { display: flex; flex-direction: column; }
+.inst-label { font-size: 0.8rem; color: #666; }
+.inst-amount { font-size: 1.1rem; font-weight: 700; color: #333; }
+
+/* Footer */
+footer { background: #111; color: #777; padding: 3rem; text-align: center; }
+.footer-logo { color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.5rem; }
+    .nav-links { display: none; }
+    .hamburger { display: block; }
+    .price-row { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .btn-pay-action { width: 100%; }
+}
