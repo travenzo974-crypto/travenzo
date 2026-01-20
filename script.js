@@ -1,15 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Navbar Scroll Background
+    // Navbar Scroll Logic for Glass Effect
     const navbar = document.querySelector('.navbar');
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+            // Scroll karne par ye class add hogi (Transparent/Blur)
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.background = 'rgba(0, 0, 0, 0.9)';
+            // Wapas upar aane par class hat jayegi (Solid Dark)
+            navbar.classList.remove('scrolled');
         }
     });
 
-    // 2. Smooth Scrolling
+    // Smooth Scroll for Buttons
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -19,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // 3. Simple Mobile Menu
+    // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     if(hamburger){
