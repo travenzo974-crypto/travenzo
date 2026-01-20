@@ -1,16 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Navbar Scroll Effect
+    
+    // Navbar Scroll Logic
     const navbar = document.querySelector('.navbar');
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-            navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)';
-            navbar.style.padding = '10px 30px';
+            // Scroll karne par Dark Glassy Class add hogi
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.background = 'rgba(15, 23, 42, 0.85)';
-            navbar.style.boxShadow = '0 20px 40px rgba(0,0,0,0.2)';
-            navbar.style.padding = '12px 30px';
+            // Top par wapas Transparent ho jayega
+            navbar.classList.remove('scrolled');
         }
     });
 
@@ -27,21 +26,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    const navPill = document.querySelector('.nav-pill'); 
 
     if (hamburger) {
         hamburger.addEventListener('click', () => {
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.display = 'none';
+            // Simple toggle for mobile view
+            if (navPill.style.display === 'block') {
+                navPill.style.display = 'none';
             } else {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '70px';
-                navLinks.style.right = '0';
-                navLinks.style.background = 'rgba(15, 23, 42, 0.95)';
-                navLinks.style.width = '100%';
-                navLinks.style.padding = '20px';
+                navPill.style.display = 'block';
+                navPill.style.position = 'absolute';
+                navPill.style.top = '80px';
+                navPill.style.right = '20px';
+                navPill.style.flexDirection = 'column';
+                navPill.style.zIndex = '999';
             }
         });
     }
