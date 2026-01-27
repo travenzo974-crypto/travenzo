@@ -13,44 +13,38 @@
     <nav class="navbar">
         <div class="nav-wrapper">
             <div class="brand">
-  <img src="logo.jpeg" alt="Travenzo Logo" style="height: 50px; width: auto; border-radius: 8px;">
+                <img src="logo.jpeg" alt="Travenzo Logo" style="height: 50px; width: auto; border-radius: 8px;">
                 <span class="brand-name">Travenzo</span>
             </div>
-
             <div class="hamburger"><i class="fas fa-bars"></i></div>
-
             <div class="nav-pill">
                 <ul class="nav-links">
                     <li><a href="#home" class="active">HOME</a></li>
                     <li><a href="#pricing">PRICING</a></li>
                 </ul>
             </div>
-
             <div class="nav-right desktop-only">
-                <a href="#pricing" class="btn-book-nav">Book Now</a>
+                <button onclick="openQR()" class="btn-book-nav">Book Now</button>
             </div>
         </div>
         
         <div class="mobile-menu">
             <a href="#home">Home</a>
             <a href="#pricing">Pricing</a>
-            <a href="#pricing" class="mobile-btn-book">Book Now</a>
+            <button onclick="openQR()" class="mobile-btn-book">Book Now</button>
         </div>
     </nav>
 
     <header id="home" class="hero" style="background-image: url('image.png');">
         <div class="hero-overlay-gradient"></div>
-        
         <div class="hero-content-left">
             <div class="tag-line"><span class="line-orange"></span> CULTURAL ADVENTURES</div>
             <h1 class="hero-title">Discover India's <br> Hidden Gems</h1>
             <p class="hero-subtitle">Experience authentic cultural journeys through India's most breathtaking destinations.</p>
-            
             <div class="hero-buttons">
                 <a href="#pricing" class="btn-hero-orange">View Plans <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
-        
         <div class="hero-curve">
             <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 120L1440 120V0C1200 80 240 80 0 0V120Z" fill="#f8fafc"/>
@@ -74,7 +68,7 @@
                             <span class="label">Registration Fee</span>
                             <span class="amount">₹299</span>
                         </div>
-                        <button class="btn-pay-small">Pay Now</button>
+                        <button class="btn-pay-small" onclick="openQR()">Pay Now</button>
                     </div>
                 </div>
                 
@@ -83,13 +77,11 @@
                         <div class="plan-header">Standard Booking</div>
                         <div class="price-row">
                             <span class="plan-price">₹1,499</span>
-                            <button class="btn-pay-action">Pay Now</button>
+                            <button class="btn-pay-action" onclick="openQR()">Pay Now</button>
                         </div>
                         <div class="full-pay-row">
-                            <div class="fp-text">
-                                <span>Full Payment:</span> <strong>₹4,990</strong>
-                            </div>
-                            <button class="btn-pay-action-small">Pay Now</button>
+                            <div class="fp-text"><span>Full Payment:</span> <strong>₹4,990</strong></div>
+                            <button class="btn-pay-action-small" onclick="openQR()">Pay Now</button>
                         </div>
                         <ul class="plan-features">
                             <li><i class="fas fa-check"></i> Standard accommodation</li>
@@ -102,13 +94,11 @@
                         <div class="plan-header">Premium Booking</div>
                         <div class="price-row">
                             <span class="plan-price">₹1,710</span>
-                            <button class="btn-pay-action">Pay Now</button>
+                            <button class="btn-pay-action" onclick="openQR()">Pay Now</button>
                         </div>
                         <div class="full-pay-row">
-                            <div class="fp-text">
-                                <span>Full Payment:</span> <strong>₹5,700</strong>
-                            </div>
-                            <button class="btn-pay-action-small">Pay Now</button>
+                            <div class="fp-text"><span>Full Payment:</span> <strong>₹5,700</strong></div>
+                            <button class="btn-pay-action-small" onclick="openQR()">Pay Now</button>
                         </div>
                         <ul class="plan-features">
                             <li><i class="fas fa-check"></i> Premium accommodation</li>
@@ -127,7 +117,7 @@
                             <span class="label">Registration Fee</span>
                             <span class="amount">₹799</span>
                         </div>
-                        <button class="btn-pay-small">Pay Now</button>
+                        <button class="btn-pay-small" onclick="openQR()">Pay Now</button>
                     </div>
                 </div>
 
@@ -136,7 +126,7 @@
                         <div class="plan-header">Total Booking Amount</div>
                         <div class="price-row center-price">
                             <span class="plan-price highlight">₹7,965</span>
-                            <button class="btn-pay-action large">Pay Now</button>
+                            <button class="btn-pay-action large" onclick="openQR()">Pay Now</button>
                         </div>
 
                         <div class="installment-container">
@@ -149,14 +139,14 @@
                                         <span class="inst-label">1st Installment</span>
                                         <span class="inst-amount">₹10,000</span>
                                     </div>
-                                    <button class="btn-pay-inst">Pay Now</button>
+                                    <button class="btn-pay-inst" onclick="openQR()">Pay Now</button>
                                 </div>
                                 <div class="inst-item">
                                     <div class="inst-info">
                                         <span class="inst-label">2nd Installment</span>
                                         <span class="inst-amount">₹8,585</span>
                                     </div>
-                                    <button class="btn-pay-inst">Pay Now</button>
+                                    <button class="btn-pay-inst" onclick="openQR()">Pay Now</button>
                                 </div>
                             </div>
                         </div>
@@ -164,13 +154,21 @@
                         <ul class="plan-features">
                             <li><i class="fas fa-check"></i> All transportation included</li>
                             <li><i class="fas fa-check"></i> Expert mountain guides</li>
-                            <li><i class="fas fa-check"></i> 5N/6D Stay included</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <div id="qrModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeQR()">&times;</span>
+            <h3>Scan to Pay</h3>
+            <p>Use PhonePe or any UPI app</p>
+            <img src="qr.jpeg" alt="Payment QR Code" class="qr-img">
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

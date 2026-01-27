@@ -10,33 +10,35 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Mobile Menu Toggle
+    // Mobile Menu
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
-
     if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', () => {
             mobileMenu.classList.toggle('active');
-            
-            // Toggle icon from bars to times (X)
             const icon = hamburger.querySelector('i');
             if (mobileMenu.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
+                icon.classList.remove('fa-bars'); icon.classList.add('fa-times');
             } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times'); icon.classList.add('fa-bars');
             }
         });
     }
 
-    // Close menu when clicking a link
-    document.querySelectorAll('.mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            const icon = hamburger.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        });
-    });
+    // QR Code Modal Logic
+    window.openQR = function() {
+        document.getElementById('qrModal').style.display = 'block';
+    }
+
+    window.closeQR = function() {
+        document.getElementById('qrModal').style.display = 'none';
+    }
+
+    // Close modal if clicked outside
+    window.onclick = function(event) {
+        const modal = document.getElementById('qrModal');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 });
